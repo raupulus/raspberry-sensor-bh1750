@@ -23,4 +23,19 @@ class BH1750:
     def __init__(self, device=0x23):
         self.DEVICE = device
 
+    def data_to_decimal(self, data):
+        """
+        Convierte los datos de 2 bytes que entra en "data" a número decimal.
+        :param data:
+        :return:
+        """
+        print('convertToNumber() → data:', data)
+        return ((data[1] + (256 * data[0])) / 1.2)
 
+    def read_light(self):
+        data = self.bus.read_i2c_block_data(
+            self.DEVICE,
+            self.ONE_TIME_HIGH_RES_MODE
+        )
+
+        return self.data_to_decimal(data)
