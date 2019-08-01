@@ -10,7 +10,7 @@
 #
 # --------------------------------------
 from time import sleep
-from bh1750 import BH1750
+from BH1750 import BH1750
 
 sensor = BH1750()
 

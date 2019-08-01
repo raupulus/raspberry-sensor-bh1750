@@ -12,6 +12,7 @@
 import smbus
 import time
 
+
 class BH1750:
     DEVICE = 0x23      # Default device I2C address
     POWER_DOWN = 0x00  # No active state
