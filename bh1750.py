@@ -29,7 +29,6 @@ class BH1750:
         :param data:
         :return:
         """
-        print('convertToNumber() → data:', data)
         return ((data[1] + (256 * data[0])) / 1.2)
 
     def read_light(self):
