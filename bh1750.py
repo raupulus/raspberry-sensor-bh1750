@@ -50,6 +50,6 @@ class BH1750:
         :return:
         """
         lux = self.read_light()
-        print('Light Level : ' + str(lux) + " lux")
+        str_lux = 'Light Level : ' + str(lux) + " lux"
 
-        return lux
+        return str_lux
