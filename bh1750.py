@@ -39,3 +39,13 @@ class BH1750:
         )
 
         return self.data_to_decimal(data)
+
+    def read_light_format_string(self):
+        """
+        Devuelve la cantidad de lux formateado en una cadena.
+        :return:
+        """
+        lux = self.read_light()
+        print('Light Level : ' + str(lux) + " lux")
+
+        return lux
