@@ -33,6 +33,10 @@ class BH1750:
         return ((data[1] + (256 * data[0])) / 1.2)
 
     def read_light(self):
+        """
+        Realiza la lectura del sensor.
+        :return:
+        """
         data = self.bus.read_i2c_block_data(
             self.DEVICE,
             self.ONE_TIME_HIGH_RES_MODE
